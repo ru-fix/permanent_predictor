@@ -1,0 +1,22 @@
+{
+  "environments": {
+    "base": {
+      "amount_arms": 5,
+      "context_size": 10,
+      "amount_contexts": 1000,
+      "arm_range": [
+        0,
+        1
+      ],
+      "context_range": [
+        0,
+        1
+      ],
+      "arm_error_params": [
+        0,
+        0.05
+      ],
+      "seed": 2
+    }
+  }
+}

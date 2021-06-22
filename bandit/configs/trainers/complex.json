@@ -1,0 +1,29 @@
+{
+  "trainers": {
+    "BaseNNAndBanditTrainer": {
+      "type": "BaseNNAndBanditTrainer",
+      "kwargs": {
+        "bandit_trainer_config": {
+          "type": "ContextBanditTrainer",
+          "kwargs": [
+            "trainers.base_bandit.kwargs*",
+            "save_dataset_variable_names"
+          ]
+        },
+        "nn_trainer_config": {
+          "type": "SimpleNNTrainer",
+          "kwargs": "trainers.base_nn.kwargs*"
+        },
+        "amount_arms": "environments.base.amount_arms",
+        "amount_rounds": 100,
+        "round_iterations_rule": "linspace",
+        "amount_save_rounds": 100
+      },
+      "save_dataset_variable_names": [
+        "played_arm",
+        "context",
+        "obtained_reward"
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "trainers": {
+    "SimpleNNTrainer": {
+      "type": "SimpleNNTrainer",
+      "kwargs": [
+        "environments.base.amount_arms",
+        "trainers.base_nn.kwargs*",
+        "trainer_kwargs*"
+      ],
+      "trainer_kwargs": {
+        "amount_rounds": 5,
+        "round_iterations_rule": "linspace",
+        "amount_save_rounds": 5,
+        "save_dataset_variable_names": [
+          "played_arm",
+          "context",
+          "obtained_reward"
+        ]
+      }
+    }
+  }
+}

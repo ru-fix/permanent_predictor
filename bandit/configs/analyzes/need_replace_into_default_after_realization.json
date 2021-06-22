@@ -1,0 +1,19 @@
+{
+  "analyzes": {
+    "compare": {
+      "analyzer": "BaseAnalyzer",
+      "handler": "LocalStateHandler",
+      "analyzer_params": {
+        "experiment_locations": [
+          "24_03_2021_14_34_46/*"
+        ],
+        "reg_exp_filter": "lr_0.1+",
+        "best_n": 30,
+        "compare_function": {
+          "method": "cumulative_reward",
+          "params": {}
+        }
+      }
+    }
+  }
+}

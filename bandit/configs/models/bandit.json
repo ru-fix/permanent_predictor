@@ -1,0 +1,85 @@
+{
+  "models": {
+    "SimpleGreedy": {
+      "type": "SimpleGreedy",
+      "kwargs": [
+        "environments.base.amount_arms",
+        "environments.base.amount_contexts",
+        "exploration_trials"
+      ],
+      "exploration_trials": 10
+    },
+    "EGreedy": {
+      "type": "EGreedy",
+      "kwargs": [
+        "environments.base.amount_arms",
+        "optimistic_initialization",
+        "epsilon",
+        "seed"
+      ],
+      "epsilon": 0.1,
+      "optimistic_initialization": 4,
+      "seed": 1
+    },
+    "UCB": {
+      "type": "UCB",
+      "kwargs": [
+        "alpha",
+        "environments.base.amount_arms",
+        "exploration_trials"
+      ],
+      "alpha": 0.11,
+      "exploration_trials": 5
+    },
+    "NSEGreedy": {
+      "type": "NSEGreedy",
+      "kwargs": [
+        "environments.base.amount_arms",
+        "optimistic_initialization",
+        "epsilon",
+        "seed",
+        "alpha"
+      ],
+      "alpha": 0.15,
+      "epsilon": 0.15,
+      "optimistic_initialization": 3,
+      "seed": 1
+    },
+    "NSUCB": {
+      "type": "NSUCB",
+      "kwargs": [
+        "environments.base.amount_arms",
+        "alpha",
+        "gamma",
+        "exploration_trials"
+      ],
+      "alpha": 0.11,
+      "gamma": 0.9,
+      "exploration_trials": 5
+    },
+    "LinUCB": {
+      "type": "LinUCB",
+      "kwargs": [
+        "environments.base.amount_arms",
+        "environments.base.context_size",
+        "alpha",
+        "dzeta"
+      ],
+      "alpha": 0.889,
+      "dzeta": 1
+    },
+    "NSLinUCB": {
+      "type": "NSLinUCB",
+      "kwargs": [
+        "environments.base.amount_arms",
+        "environments.base.context_size",
+        "alpha",
+        "dzeta",
+        "history_size"
+      ],
+      "alpha": 0.889,
+      "dzeta": 1,
+      "history_size": 100
+    }
+  }
+}

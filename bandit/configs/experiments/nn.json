@@ -1,0 +1,38 @@
+{
+    "experiments": {
+        "MultiLayerGroup": {
+            "trainer": "SimpleNNTrainer",
+            "model": "MultiLayerGroup",
+            "datasets_handler": "NNDatasetsHandler",
+            "environment": "slinenv",
+            "state_handler": "LocalStateHandler",
+            "analyzer": "BaseAnalyzer",
+            "run_params": {
+                "models.MultiLayerGroup.kwargs": {
+                    "amount_layers": {
+                        "method": "linspace",
+                        "params": {
+                            "start": 0,
+                            "stop": 3,
+                            "num": 1,
+                            "dtype": "int"
+                        }
+                    }
+                },
+                "trainers.SimpleNNTrainer.kwargs": {
+                    "amount_epochs": {
+                        "method": "linspace",
+                        "params": {
+                            "start": 5,
+                            "stop": 20,
+                            "num": 5,
+                            "dtype": "int"
+                        }
+                    },
+                    "amount_save_epochs": [20],
+                    "learning_rate": [1e-1, 1e-2, 1e-3]
+                }
+            }
+        }
+    }
+}

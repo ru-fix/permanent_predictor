@@ -1,0 +1,231 @@
+{
+    "analyzers": {
+        "BaseAnalyzer": {
+            "type": "BaseAnalyzer",
+            "kwargs": [
+                "default_graphics_params",
+                "graphics_params",
+                "default_compare_graphics_params",
+                "compare_graphics_params"
+            ],
+            "default_graphics_params": {
+                "layout": {
+                    "hoverlabel": {
+                        "namelength": -1
+                    }
+                }
+            },
+            "graphics_params": {
+                "optimal_choice_percentage": {
+                    "type": "Scatter",
+                    "x_axis_mode": "exist",
+                    "layout": {
+                        "title": "Optimal choice percentage",
+                        "xaxis_title": "Round",
+                        "yaxis_title": "Percent",
+                        "showlegend": false
+                    }
+                },
+                "optimal_choice_percentage_for_trials": {
+                    "type": "Scatter",
+                    "x_axis_mode": "exist",
+                    "layout": {
+                        "title": "Optimal choice percentage for {last_trials} trials",
+                        "xaxis_title": "Round",
+                        "yaxis_title": "Percent",
+                        "showlegend": false
+                    }
+                },
+                "cumulative_reward": {
+                    "type": "Scatter",
+                    "x_axis_mode": "exist",
+                    "layout": {
+                        "title": "Cumulative reward",
+                        "xaxis_title": "Round",
+                        "yaxis_title": "Reward",
+                        "showlegend": false
+                    }
+                },
+                "cumulative_regret": {
+                    "type": "Scatter",
+                    "x_axis_mode": "exist",
+                    "layout": {
+                        "title": "Cumulative regret",
+                        "xaxis_title": "Round",
+                        "yaxis_title": "Regret",
+                        "showlegend": false
+                    }
+                },
+                "optimal_choice_percentage_per_arm": {
+                    "type": "PlayedAndOptimalPlaysBar",
+                    "data": [
+                        {
+                            "name": "Optimal"
+                        }
+                    ],
+                    "layout": {
+                        "title": "Optimal choice fraction per arm",
+                        "xaxis_title": "Arm",
+                        "yaxis_title": "Fraction",
+                        "legend_title_text": "Choices"
+                    }
+                },
+                "mean_obtained_reward_per_arm": {
+                    "type": "MultiScatter",
+                    "x_axis_mode": "exist",
+                    "layout": {
+                        "title": "Mean obtained reward per arm",
+                        "xaxis_title": "Round",
+                        "yaxis_title": "Reward",
+                        "legend_title_text": "Arm"
+                    }
+                },
+                "mean_expected_reward_per_arm": {
+                    "type": "MultiScatter",
+                    "x_axis_mode": "exist",
+                    "layout": {
+                        "title": "Mean expected reward per arm",
+                        "xaxis_title": "Round",
+                        "yaxis_title": "Reward",
+                        "legend_title_text": "Arm"
+                    }
+                },
+                "mean_exprected_reward_deviation_per_arm": {
+                    "type": "MultiScatter",
+                    "x_axis_mode": "exist",
+                    "layout": {
+                        "title": "Mean expected reward deviation per arm",
+                        "xaxis_title": "Round",
+                        "yaxis_title": "Reward deviation",
+                        "legend_title_text": "Arm"
+                    }
+                },
+                "train_loss_per_nn": {
+                    "type": "MultiScatterGroups",
+                    "x_axis_mode": "exist",
+                    "group_item_names": [
+                        "Round"
+                    ],
+                    "layout": {
+                        "title": "Train loss",
+                        "xaxis_title": "Epoch",
+                        "yaxis_title": "Loss",
+                        "legend_title_text": "NN"
+                    }
+                },
+                "validation_loss_per_nn": {
+                    "type": "MultiScatterGroups",
+                    "x_axis_mode": "exist",
+                    "group_item_names": [
+                        "Round"
+                    ],
+                    "layout": {
+                        "title": "Validation loss",
+                        "xaxis_title": "Epoch",
+                        "yaxis_title": "Loss",
+                        "legend_title_text": "NN"
+                    }
+                },
+                "train_gt_predicted_comparison": {
+                    "type": "MultiScatterGroups",
+                    "x_axis_mode": "exist",
+                    "group_item_names": [
+                        "Round"
+                    ],
+                    "layout": {
+                        "title": "Train vs predicted comparison",
+                        "xaxis_title": "Predicted (train)",
+                        "yaxis_title": "Ground truth",
+                        "legend_title_text": "NN"
+                    },
+                    "traces": {
+                        "mode": "markers"
+                    }
+                },
+                "validation_gt_predicted_comparison": {
+                    "type": "MultiScatterGroups",
+                    "x_axis_mode": "exist",
+                    "group_item_names": [
+                        "Round"
+                    ],
+                    "layout": {
+                        "title": "Validation vs predicted comparison",
+                        "xaxis_title": "Predicted (validation)",
+                        "yaxis_title": "Ground truth",
+                        "legend_title_text": "NN"
+                    },
+                    "traces": {
+                        "mode": "markers"
+                    }
+                }
+            },
+            "default_compare_graphics_params": {
+                "layout": {
+                    "legend_title_text": "Experiment",
+                    "showlegend": true
+                }
+            },
+            "compare_graphics_params": {
+                "optimal_choice_percentage": {
+                    "group_item_names": [
+                        "Arm"
+                    ]
+                },
+                "optimal_choice_percentage_for_trials": {
+                    "group_item_names": [
+                        "Arm"
+                    ]
+                },
+                "cumulative_reward": {
+                    "group_item_names": [
+                        "Arm"
+                    ]
+                },
+                "cumulative_regret": {
+                    "group_item_names": [
+                        "Arm"
+                    ]
+                },
+                "mean_obtained_reward_per_arm": {
+                    "group_item_names": [
+                        "Arm"
+                    ]
+                },
+                "mean_expected_reward_per_arm": {
+                    "group_item_names": [
+                        "Arm"
+                    ]
+                },
+                "mean_exprected_reward_deviation_per_arm": {
+                    "group_item_names": [
+                        "Arm"
+                    ]
+                },
+                "train_loss_per_nn": {
+                    "group_item_names": [
+                        "Arm",
+                        "Round"
+                    ]
+                },
+                "validation_loss_per_nn": {
+                    "group_item_names": [
+                        "Arm",
+                        "Round"
+                    ]
+                },
+                "train_gt_predicted_comparison": {
+                    "group_item_names": [
+                        "Arm",
+                        "Round"
+                    ]
+                },
+                "validation_gt_predicted_comparison": {
+                    "group_item_names": [
+                        "Arm",
+                        "Round"
+                    ]
+                }
+            }
+        }
+    }
+}

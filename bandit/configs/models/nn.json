@@ -1,0 +1,15 @@
+{
+    "models": {
+        "MultiLayerGroup": {
+            "type": "MultiLayerGroup",
+            "kwargs": {
+                "multiple_arms": true,
+                "amount_arms": "environments.base.amount_arms",
+                "multilayer_kwargs": {
+                    "context_size": "environments.base.context_size",
+                    "amount_layers": 0
+                }
+            }
+        }
+    }
+}

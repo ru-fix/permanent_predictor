@@ -1,0 +1,5 @@
+{
+    "EXPERIMENT_RESULTS_DIR_PATH": "results/experiments",
+    "MODEL_RESULTS_DIR_PATH": "results/models",
+    "ANALYZE_RESULTS_DIR_PATH": "results/analyzes"
+}

@@ -1,0 +1,31 @@
+{
+    "experiments": {
+        "NN+LinUCB": {
+            "trainer": "BaseNNAndBanditTrainer",
+            "model": "NNAndContextBanditComplex",
+            "environment": "slinenv",
+            "datasets_handler": "ComplexDatasetsHandler",
+            "state_handler": "LocalStateHandler",
+            "analyzer": "BaseAnalyzer",
+            "run_params": {
+                "models.NNAndContextBanditComplex.kwargs.bandit_config.kwargs": {
+                    "alpha": [
+                        0.5
+                    ]
+                },
+                "trainers.BaseNNAndBanditTrainer.kwargs.nn_trainer_config.kwargs": {
+                  "reset": [false],
+                    "learning_rate": [
+                        1e-2
+                    ],
+                    "amount_epochs": [
+                        30
+                    ],
+                    "amount_save_epochs": [
+                        20
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+{
+  "trainers": {
+    "base_nn": {
+      "kwargs": {
+        "amount_arms": "environments.base.amount_arms",
+        "reset": true,
+        "last_trials": 0,
+        "last_update": false,
+        "criterion_name": "MSELoss",
+        "optimizer_name": "Adam",
+        "amount_epochs": 5,
+        "amount_save_epochs": 5,
+        "learning_rate": 0.01,
+        "metrics": {
+          "train_loss_per_nn": {
+            "type": "mean_loss_per_nn",
+            "arg_names": [
+              "train_loss",
+              "train_epoch_index",
+              "train_nn_index",
+              "train_epoch_size",
+              "train_round_index"
+            ],
+            "kwargs": {
+              "mode": "update",
+              "split": "train_round_index",
+              "amount_epochs": "trainers.base_nn.kwargs.amount_epochs",
+              "amount_save_epochs": "trainers.base_nn.kwargs.amount_save_epochs"
+            }
+          },
+          "validation_loss_per_nn": {
+            "type": "mean_loss_per_nn",
+            "arg_names": [
+              "validation_loss",
+              "validation_epoch_index",
+              "validation_nn_index",
+              "validation_epoch_size",
+              "validation_round_index"
+            ],
+            "kwargs": {
+              "mode": "update",
+              "split": "validation_round_index",
+              "amount_epochs": "trainers.base_nn.kwargs.amount_epochs",
+              "amount_save_epochs": "trainers.base_nn.kwargs.amount_save_epochs"
+            }
+          },
+          "train_gt_predicted_comparison": {
+            "type": "gt_vs_predicted_per_nn_for_last_epoch",
+            "arg_names": [
+              "train_prediction_rewards",
+              "train_gt_rewards",
+              "train_epoch_index",
+              "train_nn_index",
+              "train_round_index"
+            ],
+            "kwargs": {
+              "mode": "update",
+              "split": "train_round_index"
+            }
+          },
+          "validation_gt_predicted_comparison": {
+            "type": "gt_vs_predicted_per_nn_for_last_epoch",
+            "arg_names": [
+              "validation_prediction_rewards",
+              "validation_gt_rewards",
+              "validation_epoch_index",
+              "validation_nn_index",
+              "validation_round_index"
+            ],
+            "kwargs": {
+              "mode": "update",
+              "split": "validation_round_index"
+            }
+          }
+        }
+      }
+    }
+  }
+}

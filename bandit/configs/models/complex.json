@@ -1,0 +1,14 @@
+{
+  "models": {
+    "NNAndContextBanditComplex": {
+      "type": "NNAndContextBanditComplex",
+      "kwargs": {
+        "nn_config": "models.MultiLayerGroup",
+        "bandit_config": "models.LinUCB",
+        "multiple_arms": true,
+        "amount_arms": "environments.base.amount_arms",
+        "exploration_trials": 100
+      }
+    }
+  }
+}

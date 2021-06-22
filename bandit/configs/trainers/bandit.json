@@ -1,0 +1,39 @@
+{
+  "trainers": {
+    "ContextBanditTrainer": {
+      "type": "ContextBanditTrainer",
+      "kwargs": [
+        "environments.base.amount_arms",
+        "trainers.base_bandit.kwargs*",
+        "trainer_kwargs*"
+      ],
+      "trainer_kwargs": {
+        "amount_rounds": 100,
+        "round_iterations_rule": "linspace",
+        "amount_save_rounds": 100,
+        "save_dataset_variable_names": [
+          "played_arm",
+          "context",
+          "obtained_reward"
+        ]
+      }
+    },
+    "SimpleBanditTrainer": {
+      "type": "SimpleBanditTrainer",
+      "kwargs": [
+        "environments.base.amount_arms",
+        "trainers.base_bandit.kwargs*",
+        "trainer_kwargs*"
+      ],
+      "trainer_kwargs": {
+        "amount_rounds": 100,
+        "round_iterations_rule": "linspace",
+        "amount_save_rounds": 100,
+        "save_dataset_variable_names": [
+          "played_arm",
+          "obtained_reward"
+        ]
+      }
+    }
+  }
+}

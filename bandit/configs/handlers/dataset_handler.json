@@ -1,0 +1,39 @@
+{
+  "handlers": {
+    "BanditDatasetsHandler": {
+      "type": "DatasetsHandler",
+      "kwargs": {
+        "batch_size": 1,
+        "amount_datasets": "environments.base.amount_arms",
+        "proportions": {
+          "train": 1
+        },
+        "amount_retrain_samples": 0
+      }
+    },
+    "NNDatasetsHandler": {
+      "type": "DatasetsHandler",
+      "kwargs": {
+        "batch_size": 1,
+        "amount_datasets": "environments.base.amount_arms",
+        "proportions": {
+          "train": 0.9,
+          "validation": 0.1
+        },
+        "amount_retrain_samples": 0
+      }
+    },
+    "ComplexDatasetsHandler": {
+      "type": "DatasetsHandler",
+      "kwargs": {
+        "batch_size": 1,
+        "amount_datasets": "environments.base.amount_arms",
+        "proportions": {
+          "train": 0.9,
+          "validation": 0.1
+        },
+        "amount_retrain_samples": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "environments": {
+    "slinenv": {
+      "type": "make",
+      "kwargs": [
+        "id",
+        "environments.base.amount_arms",
+        "environments.base.context_size",
+        "environments.base.amount_contexts",
+        "environments.base.arm_range",
+        "environments.base.context_range",
+        "environments.base.arm_error_params",
+        "environments.base.seed"
+      ],
+      "id": "synthetic_bandit_environments:slinenv-v0"
+    }
+  }
+}

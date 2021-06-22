@@ -1,0 +1,12 @@
+{
+  "analyzes": {
+    "compare": {
+      "type": "compare_experiments",
+      "kwargs": {
+        "experiment_locations": "27_04_2021_12_49_53/*"
+      },
+      "analyzer": "BaseAnalyzer",
+      "handler": "LocalStateHandler"
+    }
+  }
+}

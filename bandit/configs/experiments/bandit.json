@@ -1,0 +1,60 @@
+{
+    "experiments": {
+        "SimpleGreedy": {
+            "trainer": "SimpleBanditTrainer",
+            "model": "SimpleGreedy",
+            "datasets_handler": "BanditDatasetsHandler",
+            "environment": "slinenv",
+            "analyzer": "BaseAnalyzer",
+            "state_handler": "LocalStateHandler"
+        },
+        "EGreedy": {
+            "trainer": "SimpleBanditTrainer",
+            "model": "EGreedy",
+            "datasets_handler": "BanditDatasetsHandler",
+            "environment": "slinenv",
+            "analyzer": "BaseAnalyzer",
+            "state_handler": "LocalStateHandler"
+        },
+        "UCB": {
+            "trainer": "SimpleBanditTrainer",
+            "model": "UCB",
+            "datasets_handler": "BanditDatasetsHandler",
+            "environment": "slinenv",
+            "analyzer": "BaseAnalyzer",
+            "state_handler": "LocalStateHandler"
+        },
+        "NSEGreedy": {
+            "trainer": "SimpleBanditTrainer",
+            "model": "NSEGreedy",
+            "datasets_handler": "BanditDatasetsHandler",
+            "environment": "slinenv",
+            "analyzer": "BaseAnalyzer",
+            "state_handler": "LocalStateHandler"
+        },
+        "NSUCB": {
+            "trainer": "SimpleBanditTrainer",
+            "model": "NSUCB",
+            "datasets_handler": "BanditDatasetsHandler",
+            "environment": "slinenv",
+            "analyzer": "BaseAnalyzer",
+            "state_handler": "LocalStateHandler"
+        },
+        "LinUCB": {
+            "trainer": "ContextBanditTrainer",
+            "model": "LinUCB",
+            "datasets_handler": "BanditDatasetsHandler",
+            "environment": "slinenv",
+            "analyzer": "BaseAnalyzer",
+            "state_handler": "LocalStateHandler"
+        },
+        "NSLinUCB": {
+            "trainer": "ContextBanditTrainer",
+            "model": "NSLinUCB",
+            "datasets_handler": "BanditDatasetsHandler",
+            "environment": "slinenv",
+            "analyzer": "BaseAnalyzer",
+            "state_handler": "LocalStateHandler"
+        }
+    }
+}

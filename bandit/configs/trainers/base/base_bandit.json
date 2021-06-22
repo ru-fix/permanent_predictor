@@ -1,0 +1,84 @@
+{
+  "trainers": {
+    "base_bandit": {
+      "kwargs": {
+        "amount_arms": "environments.base.amount_arms",
+        "reset": false,
+        "last_trials": 0,
+        "last_update": true,
+        "metrics": {
+          "optimal_choice_percentage": {
+            "type": "optimal_choice_percentage",
+            "arg_names": [
+              "optimal_arm",
+              "played_arm",
+              "round_index"
+            ]
+          },
+          "optimal_choice_percentage_for_trials": {
+            "type": "optimal_choice_percentage",
+            "arg_names": [
+              "played_arm",
+              "optimal_arm",
+              "round_index"
+            ],
+            "kwargs": {
+              "last_trials": 100
+            }
+          },
+          "cumulative_reward": {
+            "type": "cumulative_reward",
+            "arg_names": [
+              "obtained_reward",
+              "round_index"
+            ]
+          },
+          "cumulative_regret": {
+            "type": "cumulative_regret",
+            "arg_names": [
+              "max_reward",
+              "obtained_reward",
+              "round_index"
+            ]
+          },
+          "mean_exprected_reward_deviation_per_arm": {
+            "type": "mean_exprected_reward_deviation_per_arm",
+            "arg_names": [
+              "expected_reward",
+              "obtained_reward",
+              "played_arm",
+              "round_index"
+            ]
+          },
+          "mean_obtained_reward_per_arm": {
+            "type": "mean_rewards_per_arm",
+            "arg_names": [
+              "obtained_reward",
+              "played_arm",
+              "round_index"
+            ]
+          },
+          "mean_expected_reward_per_arm": {
+            "type": "mean_rewards_per_arm",
+            "arg_names": [
+              "expected_reward",
+              "played_arm",
+              "round_index"
+            ]
+          },
+          "optimal_choice_percentage_per_arm": {
+            "type": "optimal_choice_percentage_per_arm",
+            "arg_names": [
+              "played_arm",
+              "optimal_arm"
+            ],
+            "kwargs": {
+              "amount_arms": "environments.base.amount_arms",
+              "mode": "replace"
+            }
+          }
+        }
+      }
+    }
+  }
+}

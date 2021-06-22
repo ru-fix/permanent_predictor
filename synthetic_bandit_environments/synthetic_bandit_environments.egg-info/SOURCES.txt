@@ -1,0 +1,6 @@
+setup.py
+synthetic_bandit_environments.egg-info/PKG-INFO
+synthetic_bandit_environments.egg-info/SOURCES.txt
+synthetic_bandit_environments.egg-info/dependency_links.txt
+synthetic_bandit_environments.egg-info/requires.txt
+synthetic_bandit_environments.egg-info/top_level.txt
